@@ -1,16 +1,16 @@
 //connecting routes to data
-var data = require("../data");
+var journalData = require("../data/journaldata");
 
 module.exports = function (app) {
 
     //GET
     app.get("/api/journals", function (req, res) {
-        res.json(data);
+        res.json(journalData);
     });
 
     //POST
     app.post("/api/journals", function (req, res) {
-        data.push(req.body);
+        journalData.push(req.body);
         res.json("saved");
       });
 
@@ -18,12 +18,12 @@ module.exports = function (app) {
     app.dlete("/api/journals/:index", function(req, res) {
         var elem = parseINT(req.params.index);
         var tempJournal = [];
-        for (var i=0; i < data.length; i++) {
+        for (var i=0; i < journalData.length; i++) {
             if (i !== elem) {
-                tempJournal.push(data[i]);
+                tempJournal.push(journalData[i]);
             }
         }
-        data = tempJournal;
+        journalData = tempJournal;
 
         res.json("delete done");
     });
