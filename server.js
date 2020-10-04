@@ -6,6 +6,7 @@ var PORT = process.env.PORT || 3000;
 
 //setting up express app to handle data
 app.use(express.urlencoded({ extended: true}));
+app.use(express.static("public"));
 app.use(express.json());
 
 //routes

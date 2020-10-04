@@ -1,4 +1,4 @@
 //to store data in an array
-var notesArray = [];
+var journalArray = [];
 
-module.exports = notesArray;
+module.exports = journalArray;
