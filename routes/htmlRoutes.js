@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     //link to css file
     app.get("/styles", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/css/styles.css"));
+        res.sendFile(path.join(__dirname, "../public/assts/css/styles.css"));
     });
 
     //home page
