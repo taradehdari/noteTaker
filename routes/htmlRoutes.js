@@ -11,7 +11,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/assts/css/styles.css"));
     });
 
-    //home page
+    //goes to home page
     app.get("*", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
